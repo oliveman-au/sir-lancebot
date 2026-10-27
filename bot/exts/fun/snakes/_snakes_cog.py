@@ -452,6 +452,8 @@ class Snakes(Cog):
 
         Rules:  You have 4 ingredients for each antidote, you only have 10 attempts
                 Once you synthesize the antidote, you will be presented with 4 markers
+                Markers are sorted and do not correspond to the order of your ingredients.
+                They do not reveal which ingredient each marker describes.
                 Tick: This means you have a CORRECT ingredient in the CORRECT position
                 Circle: This means you have a CORRECT ingredient in the WRONG position
                 Cross: This means you have a WRONG ingredient in the WRONG position
