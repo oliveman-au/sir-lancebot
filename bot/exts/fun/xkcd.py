@@ -53,6 +53,11 @@ class XKCD(Cog):
             await ctx.send(embed=embed)
             return
 
+        if not self.latest_comic_info and (comic is None or comic.group(0) == "latest"):
+            embed.description = "Latest comic information is not available yet. Please try again shortly."
+            await ctx.send(embed=embed)
+            return
+
         comic = randint(1, self.latest_comic_info["num"]) if comic is None else comic.group(0)
 
         if comic == "latest":
