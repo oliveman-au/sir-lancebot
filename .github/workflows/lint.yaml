@@ -30,6 +30,11 @@ jobs:
           CLIENT_IN_CI: true
           CLIENT_TOKEN: ""
 
+      - name: Run regression tests
+        run: python -m unittest discover -s tests -v
+        env:
+          CLIENT_TOKEN: ""
+
       - name: Run pre-commit hooks
         run: SKIP=ruff pre-commit run --all-files
 
